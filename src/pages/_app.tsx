@@ -1,17 +1,20 @@
 import '../styles/globals.css'
-import { MantineProvider } from '@mantine/core'
+import { createEmotionCache, MantineProvider } from '@mantine/core'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
+
+const appendCache = createEmotionCache({ key: 'mantine', prepend: false })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>mantine lesson</title>
-      </Head>
-
-      <MantineProvider withGlobalStyles withNormalizeCSS>
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        emotionCache={appendCache}
+      >
+        {/* <SpotlightProvider actions={[]}> */}
         <Component {...pageProps} />
+        {/* </SpotlightProvider> */}
       </MantineProvider>
     </>
   )

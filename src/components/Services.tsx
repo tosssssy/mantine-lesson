@@ -78,8 +78,8 @@ export const Services = () => {
   ))
 
   return (
-    <div className="grid h-screen place-items-center">
-      <Card withBorder radius="md" className={classes.card}>
+    <div className="grid h-screen place-items-center bg-blue-100">
+      <Card withBorder radius="xl" className={classes.card} p={40}>
         <Group position="apart">
           <Text className={classes.title}>Services</Text>
           <Anchor size="xs" color="dimmed" sx={{ lineHeight: 1 }}>
