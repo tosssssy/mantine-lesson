@@ -1,7 +1,12 @@
 import type { NextPage } from 'next'
+import { Services } from 'components/Services'
 
 const Home: NextPage = () => {
-  return <h1 className=" text-6xl font-bold text-red-600">テスト</h1>
+  return (
+    <>
+      <Services />
+    </>
+  )
 }
 
 export default Home
